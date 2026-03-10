@@ -1,0 +1,133 @@
+[2026-03-10 19:03:31] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-10 19:03:31] 🔍 MindForge Watchdog started
+[2026-03-10 19:03:31] 📊 Check interval: 30 seconds
+[2026-03-10 19:03:31] ⚠️  Max restarts/hour: 10
+[2026-03-10 19:03:31] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[2026-03-10 19:03:31] 🚀 Starting MindForge...
+[2026-03-10 19:03:36] ✅ MindForge started (PID: 194576)
+[2026-03-10 19:03:37] ✅ MindForge alive (PID: 194576)
+[2026-03-10 19:04:07] ✅ MindForge alive (PID: 194576)
+watchdog.sh: line 68: 194576 Terminated              nohup python3 convergence.py > logs/mindforge.log 2>&1
+[2026-03-10 19:04:37] ❌ MindForge NOT running!
+[2026-03-10 19:04:37] 🔄 Restart attempt #1
+[2026-03-10 19:04:37] 🚀 Starting MindForge...
+[2026-03-10 19:04:42] ✅ MindForge started (PID: 195205)
+[2026-03-10 19:05:12] ✅ MindForge alive (PID: 195197)
+watchdog.sh: line 68: 195205 Terminated              nohup python3 convergence.py > logs/mindforge.log 2>&1
+[2026-03-10 19:05:42] ❌ MindForge NOT running!
+[2026-03-10 19:05:42] 🔄 Restart attempt #2
+[2026-03-10 19:05:42] 🚀 Starting MindForge...
+[2026-03-10 19:05:47] ✅ MindForge started (PID: 195524)
+[2026-03-10 19:06:17] ✅ MindForge alive (PID: 195524)
+[2026-03-10 19:06:47] ✅ MindForge alive (PID: 195524)
+[2026-03-10 19:07:17] ✅ MindForge alive (PID: 195524)
+watchdog.sh: line 68: 195524 Terminated              nohup python3 convergence.py > logs/mindforge.log 2>&1
+[2026-03-10 19:07:47] ❌ MindForge NOT running!
+[2026-03-10 19:07:47] 🔄 Restart attempt #3
+[2026-03-10 19:07:47] 🚀 Starting MindForge...
+[2026-03-10 19:07:52] ✅ MindForge started (PID: 196013)
+[2026-03-10 19:08:22] ❌ MindForge NOT running!
+[2026-03-10 19:08:22] 🔄 Restart attempt #4
+[2026-03-10 19:08:22] 🚀 Starting MindForge...
+[2026-03-10 19:08:27] ✅ MindForge started (PID: 196245)
+[2026-03-10 19:08:57] ❌ MindForge NOT running!
+[2026-03-10 19:08:57] 🔄 Restart attempt #5
+[2026-03-10 19:08:57] 🚀 Starting MindForge...
+[2026-03-10 19:09:02] ✅ MindForge started (PID: 196462)
+[2026-03-10 19:09:32] ❌ MindForge NOT running!
+[2026-03-10 19:09:32] 🔄 Restart attempt #6
+[2026-03-10 19:09:32] 🚀 Starting MindForge...
+[2026-03-10 19:09:37] ✅ MindForge started (PID: 196549)
+[2026-03-10 19:10:07] ❌ MindForge NOT running!
+[2026-03-10 19:10:07] 🔄 Restart attempt #7
+[2026-03-10 19:10:07] 🚀 Starting MindForge...
+[2026-03-10 19:10:12] ✅ MindForge started (PID: 196647)
+[2026-03-10 19:10:43] ❌ MindForge NOT running!
+[2026-03-10 19:10:43] 🔄 Restart attempt #8
+[2026-03-10 19:10:43] 🚀 Starting MindForge...
+[2026-03-10 19:10:48] ✅ MindForge started (PID: 196746)
+[2026-03-10 19:11:18] ❌ MindForge NOT running!
+[2026-03-10 19:11:18] 🔄 Restart attempt #9
+[2026-03-10 19:11:18] 🚀 Starting MindForge...
+[2026-03-10 19:11:23] ✅ MindForge started (PID: 196841)
+[2026-03-10 19:11:53] ❌ MindForge NOT running!
+[2026-03-10 19:11:53] 🔄 Restart attempt #10
+[2026-03-10 19:11:53] 🚀 Starting MindForge...
+[2026-03-10 19:11:58] ✅ MindForge started (PID: 196933)
+[2026-03-10 19:12:28] ❌ MindForge NOT running!
+[2026-03-10 19:12:29] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:12:59] ❌ MindForge NOT running!
+[2026-03-10 19:12:59] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:13:29] ❌ MindForge NOT running!
+[2026-03-10 19:13:29] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:13:59] ❌ MindForge NOT running!
+[2026-03-10 19:13:59] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:14:29] ❌ MindForge NOT running!
+[2026-03-10 19:14:29] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:15:00] ❌ MindForge NOT running!
+[2026-03-10 19:15:00] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:15:30] ❌ MindForge NOT running!
+[2026-03-10 19:15:30] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:16:00] ❌ MindForge NOT running!
+[2026-03-10 19:16:00] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:16:30] ❌ MindForge NOT running!
+[2026-03-10 19:16:30] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:17:00] ❌ MindForge NOT running!
+[2026-03-10 19:17:00] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:17:30] ❌ MindForge NOT running!
+[2026-03-10 19:17:30] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:18:00] ❌ MindForge NOT running!
+[2026-03-10 19:18:00] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:18:31] ❌ MindForge NOT running!
+[2026-03-10 19:18:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:19:01] ❌ MindForge NOT running!
+[2026-03-10 19:19:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:19:31] ❌ MindForge NOT running!
+[2026-03-10 19:19:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:20:01] ❌ MindForge NOT running!
+[2026-03-10 19:20:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:20:31] ❌ MindForge NOT running!
+[2026-03-10 19:20:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:21:01] ❌ MindForge NOT running!
+[2026-03-10 19:21:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:21:31] ❌ MindForge NOT running!
+[2026-03-10 19:21:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:22:01] ❌ MindForge NOT running!
+[2026-03-10 19:22:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:22:31] ❌ MindForge NOT running!
+[2026-03-10 19:22:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:23:01] ❌ MindForge NOT running!
+[2026-03-10 19:23:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:23:31] ❌ MindForge NOT running!
+[2026-03-10 19:23:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:24:01] ❌ MindForge NOT running!
+[2026-03-10 19:24:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:24:31] ❌ MindForge NOT running!
+[2026-03-10 19:24:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:25:01] ❌ MindForge NOT running!
+[2026-03-10 19:25:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:25:31] ❌ MindForge NOT running!
+[2026-03-10 19:25:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:26:01] ❌ MindForge NOT running!
+[2026-03-10 19:26:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:26:31] ❌ MindForge NOT running!
+[2026-03-10 19:26:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:27:01] ❌ MindForge NOT running!
+[2026-03-10 19:27:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:27:31] ❌ MindForge NOT running!
+[2026-03-10 19:27:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:28:01] ❌ MindForge NOT running!
+[2026-03-10 19:28:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:28:31] ❌ MindForge NOT running!
+[2026-03-10 19:28:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:29:01] ❌ MindForge NOT running!
+[2026-03-10 19:29:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:29:31] ❌ MindForge NOT running!
+[2026-03-10 19:29:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:30:01] ❌ MindForge NOT running!
+[2026-03-10 19:30:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:30:31] ❌ MindForge NOT running!
+[2026-03-10 19:30:31] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:31:01] ❌ MindForge NOT running!
+[2026-03-10 19:31:01] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 19:31:01] ⚠️  Restart limit reached. Manual intervention needed.

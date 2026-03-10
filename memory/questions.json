@@ -1,0 +1,26 @@
+{
+  "original": "How could elastic block storage product involve with the trend of artificial intelligence growth, how could it still keep its leading position in storage and how could it support the AI industry?",
+  "generated": [
+    "How could elastic block storage product involve with the trend of artificial intelligence growth, how could it still keep its leading position in storage and how could it support the AI industry?",
+    "What are the specific IOPS requirements for LLM training?",
+    "How could elastic block storage product involve with the trend of artificial intelligence growth, how could it still keep its leading position in storage and how could it support the AI industry?",
+    "What are the specific IOPS requirements for LLM training?",
+    "How does storage latency impact model training time?",
+    "What storage protocols work best with Kubernetes AI workloads?",
+    "How to optimize cost vs performance for AI storage?",
+    "What role does caching play in AI storage architectures?"
+  ],
+  "insights": [
+    "AI workloads require high-throughput, low-latency storage for training data",
+    "AI workloads require high-throughput, low-latency storage for training data",
+    "EBS must support parallel access patterns for distributed training",
+    "NVMe over Fabrics (NVMe-oF) is becoming standard for AI storage backends",
+    "AI inference needs different storage characteristics than training",
+    "Market projection: AI storage market to reach $50B+ by 2028",
+    "Key competitors: AWS EBS, Google Persistent Disk, Azure Ultra Disk",
+    "Differentiation: AI-optimized tiering, automatic data prefetching",
+    "Integration with ML frameworks (PyTorch, TensorFlow) is critical",
+    "Data locality matters - storage close to GPU clusters reduces latency",
+    "Elastic scaling must match AI workload burst patterns"
+  ]
+}

@@ -127,21 +127,24 @@ def get_folder_size_mb():
         return 0
 
 def web_search(query, count=5):
-    """Search the web"""
+    """Search the web using DuckDuckGo HTML interface"""
     try:
         log(f"  🔍 Searching: {query[:60]}...")
-        # Use searxng skill if available, fallback to web_search
-        result = subprocess.run(
-            f'openclaw web_search --count {count} "{query}" 2>/dev/null',
-            shell=True, capture_output=True, text=True, timeout=30
-        )
+        import urllib.parse
+        safe_query = urllib.parse.quote(query)
+        url = f"https://html.duckduckgo.com/html/?q={safe_query}"
+        
+        cmd = f'curl -s -A "Mozilla/5.0" --max-time 15 "{url}" 2>/dev/null | grep -oP "<a[^>]*href=\\"\\K[^\\"]*" | head -{count}'
+        result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True, timeout=20)
+        
         if result.returncode == 0 and result.stdout:
-            try:
-                data = json.loads(result.stdout)
-                if 'results' in data:
-                    return data['results'][:count]
-            except:
-                pass
+            urls = [u for u in result.stdout.strip().split('\n') if u and 'duckduckgo' not in u][:count]
+            # Fetch content from first URL
+            if urls:
+                content_cmd = f'curl -s -A "Mozilla/5.0" --max-time 10 "{urls[0]}" 2>/dev/null | head -3000'
+                content_result = subprocess.run(content_cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True, timeout=15)
+                if content_result.stdout:
+                    return [{'title': query, 'url': urls[0], 'snippet': content_result.stdout[:500]}]
         return []
     except Exception as e:
         log(f"  ⚠️  Search error: {str(e)[:80]}")
@@ -153,30 +156,36 @@ def think_and_generate_questions(question, context, research_results, current_qu
     Returns: (insights, new_questions, should_continue)
     """
     try:
-        # Build prompt for thinking
+        # Build prompt for thinking - AI has built-in knowledge
         research_summary = "\n".join([
-            f"- {r.get('title', 'N/A')[:100]}"
-            for r in research_results[:5]
-        ]) if research_results else "No research results yet"
+            f"- {r.get('title', 'N/A')[:100]}: {r.get('snippet', '')[:200]}"
+            for r in research_results[:3]
+        ]) if research_results else "(Will use internal knowledge)"
         
         recent_questions = "\n".join([
             f"- {q}" for q in current_questions[-10:]
         ]) if current_questions else "None yet"
         
-        prompt = f"""You are MindForge, an autonomous thinking agent.
+        prompt = f"""You are MindForge, an autonomous thinking agent exploring deep questions.
 
 **Original Question**: {question}
 
-**Recent Research**:
+**Research Found**:
 {research_summary}
 
 **Previous Questions Explored**:
 {recent_questions}
 
-**Task**: 
-1. Think deeply about the original question
-2. Generate 1-3 NEW questions that would deepen understanding (not already asked)
-3. Provide key insights discovered so far
+**Your Task**:
+1. Use your knowledge to think deeply about this question
+2. Generate 1-3 NEW questions that would deepen understanding
+3. Provide concrete insights based on your knowledge
+
+**Think about**:
+- Technical aspects
+- Market dynamics  
+- Future trends
+- Practical implications
 
 **Format your response EXACTLY as**:
 INSIGHTS:
@@ -193,10 +202,9 @@ CONVERGENCE: [YES if no meaningful new questions, NO if more exploration needed]
 """
         
         # Call AI model for thinking
-        result = subprocess.run(
-            f'openclaw message --message "{prompt.replace(chr(10), " ").replace(chr(34), "\\\"")}" 2>/dev/null',
-            shell=True, capture_output=True, text=True, timeout=120
-        )
+        safe_prompt = prompt.replace('\n', ' ').replace('"', '\\"')
+        cmd = f'openclaw message --message "{safe_prompt}" 2>/dev/null'
+        result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True, timeout=120)
         
         # Parse response
         response = result.stdout if result.returncode == 0 else ""
@@ -248,10 +256,9 @@ SUMMARY: [Brief summary of final understanding]
 REASONING: [Why converged or what's missing]
 """
         
-        result = subprocess.run(
-            f'openclaw message --message "{prompt.replace(chr(10), " ").replace(chr(34), "\\"")}" 2>/dev/null',
-            shell=True, capture_output=True, text=True, timeout=60
-        )
+        safe_prompt = prompt.replace('\n', ' ').replace('"', '\\"')
+        cmd = f'openclaw message --message "{safe_prompt}" 2>/dev/null'
+        result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True, timeout=60)
         
         response = result.stdout if result.returncode == 0 else ""
         
