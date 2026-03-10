@@ -1,12 +1,6 @@
 {
   "original_question": "",
   "active_questions": [
-    "How to predict data access patterns?",
-    "What's the CPU overhead of compression?",
-    "How to compress without impacting training?",
-    "What sync protocols work for edge AI?",
-    "How to handle data sovereignty?",
-    "What's the performance cost of encryption?",
     "How to enable compliant AI storage?"
   ],
   "answered": [
@@ -133,6 +127,6 @@
     "Quantum-safe encryption needed for long-term AI data",
     "Compliance: GDPR, HIPAA affect AI training data"
   ],
-  "cycle": 14,
-  "streak": 4
+  "cycle": 20,
+  "streak": 10
 }
