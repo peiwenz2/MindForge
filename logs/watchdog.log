@@ -156,3 +156,69 @@ watchdog.sh: line 68: 195524 Terminated              nohup python3 convergence.p
 [2026-03-10 20:24:18] ⚠️  Restart limit reached. Manual intervention needed.
 [2026-03-10 20:24:48] ✅ MindForge alive (PID: 206840)
 [2026-03-10 20:24:48] ☁️ Syncing to GitHub...
+[2026-03-10 20:24:48] ❌ MindForge NOT running!
+[2026-03-10 20:24:48] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:24:49]   To https://github.com/peiwenz2/MindForge.git
+[2026-03-10 20:24:49]   bb9de60..b10cb9e  master -> master
+[2026-03-10 20:24:49]   ✅ GitHub sync complete
+[2026-03-10 20:25:18] ❌ MindForge NOT running!
+[2026-03-10 20:25:18] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:25:19] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:25:48] ❌ MindForge NOT running!
+[2026-03-10 20:25:48] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:25:49] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:26:18] ❌ MindForge NOT running!
+[2026-03-10 20:26:18] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:26:19] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:26:48] ❌ MindForge NOT running!
+[2026-03-10 20:26:48] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:26:49] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:27:18] ❌ MindForge NOT running!
+[2026-03-10 20:27:18] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:27:19] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:27:48] ❌ MindForge NOT running!
+[2026-03-10 20:27:48] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:27:49] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:28:18] ❌ MindForge NOT running!
+[2026-03-10 20:28:18] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:28:19] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:28:48] ❌ MindForge NOT running!
+[2026-03-10 20:28:48] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:28:49] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:29:18] ❌ MindForge NOT running!
+[2026-03-10 20:29:18] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:29:19] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:29:49] ❌ MindForge NOT running!
+[2026-03-10 20:29:49] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:29:50] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:30:19] ❌ MindForge NOT running!
+[2026-03-10 20:30:19] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:30:20] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:30:49] ❌ MindForge NOT running!
+[2026-03-10 20:30:49] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:30:50] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:31:19] ❌ MindForge NOT running!
+[2026-03-10 20:31:19] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:31:21] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:31:49] ❌ MindForge NOT running!
+[2026-03-10 20:31:49] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:31:51] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:32:19] ❌ MindForge NOT running!
+[2026-03-10 20:32:19] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:32:21] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:32:49] ❌ MindForge NOT running!
+[2026-03-10 20:32:50] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:32:52] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:33:20] ❌ MindForge NOT running!
+[2026-03-10 20:33:20] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:33:22] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:33:50] ❌ MindForge NOT running!
+[2026-03-10 20:33:50] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:33:52] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:34:20] ❌ MindForge NOT running!
+[2026-03-10 20:34:20] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:34:22] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:34:50] ❌ MindForge NOT running!
+[2026-03-10 20:34:50] ⚠️  Restart limit reached. Manual intervention needed.
+[2026-03-10 20:34:52] ✅ MindForge alive (PID: 206840)
+[2026-03-10 20:34:52] ☁️ Syncing to GitHub...

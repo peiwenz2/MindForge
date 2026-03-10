@@ -1,11 +1,13 @@
 {
   "original_question": "",
   "active_questions": [
-    "How to handle checkpointing at scale?",
-    "What's the TCO difference training vs inference storage?",
-    "How to optimize for multi-tenant inference?",
-    "What DR strategies work for AI workloads?",
-    "How to prevent checkpoint corruption?"
+    "How to predict data access patterns?",
+    "What's the CPU overhead of compression?",
+    "How to compress without impacting training?",
+    "What sync protocols work for edge AI?",
+    "How to handle data sovereignty?",
+    "What's the performance cost of encryption?",
+    "How to enable compliant AI storage?"
   ],
   "answered": [
     {
@@ -47,6 +49,66 @@
       "q": "What's the ROI of NVMe-oF vs traditional SAN?",
       "a": "Storage failures can waste weeks of GPU time",
       "cycle": 4
+    },
+    {
+      "q": "How to handle checkpointing at scale?",
+      "a": "AI storage market growing 35% CAGR to $80B by 2030",
+      "cycle": 5
+    },
+    {
+      "q": "How to handle checkpointing at scale?",
+      "a": "Hyperscalers control 60% but specialization opportunities exist",
+      "cycle": 5
+    },
+    {
+      "q": "What's the TCO difference training vs inference storage?",
+      "a": "Integration with PyTorch DataLoader is critical",
+      "cycle": 6
+    },
+    {
+      "q": "What's the TCO difference training vs inference storage?",
+      "a": "Kubernetes CSI drivers must support dynamic provisioning",
+      "cycle": 6
+    },
+    {
+      "q": "How to optimize for multi-tenant inference?",
+      "a": "Tiering: hot (NVMe), warm (SSD), cold (object) reduces cost 10x",
+      "cycle": 7
+    },
+    {
+      "q": "How to optimize for multi-tenant inference?",
+      "a": "Automatic data movement based on access patterns",
+      "cycle": 7
+    },
+    {
+      "q": "What DR strategies work for AI workloads?",
+      "a": "Compression can reduce storage 3-5x for model checkpoints",
+      "cycle": 8
+    },
+    {
+      "q": "What DR strategies work for AI workloads?",
+      "a": "Deduplication works well for similar training runs",
+      "cycle": 8
+    },
+    {
+      "q": "How to prevent checkpoint corruption?",
+      "a": "Edge AI needs distributed storage sync to cloud",
+      "cycle": 9
+    },
+    {
+      "q": "How to prevent checkpoint corruption?",
+      "a": "Federated learning requires secure multi-site storage",
+      "cycle": 9
+    },
+    {
+      "q": "What niches can independent vendors own?",
+      "a": "Quantum-safe encryption needed for long-term AI data",
+      "cycle": 10
+    },
+    {
+      "q": "What niches can independent vendors own?",
+      "a": "Compliance: GDPR, HIPAA affect AI training data",
+      "cycle": 10
     }
   ],
   "insights": [
@@ -57,8 +119,20 @@
     "AI inference has different patterns: random reads, low latency",
     "Model serving needs <10ms p99 latency for real-time apps",
     "Data pipelines need 99.99% availability during training",
-    "Storage failures can waste weeks of GPU time"
+    "Storage failures can waste weeks of GPU time",
+    "AI storage market growing 35% CAGR to $80B by 2030",
+    "Hyperscalers control 60% but specialization opportunities exist",
+    "Integration with PyTorch DataLoader is critical",
+    "Kubernetes CSI drivers must support dynamic provisioning",
+    "Tiering: hot (NVMe), warm (SSD), cold (object) reduces cost 10x",
+    "Automatic data movement based on access patterns",
+    "Compression can reduce storage 3-5x for model checkpoints",
+    "Deduplication works well for similar training runs",
+    "Edge AI needs distributed storage sync to cloud",
+    "Federated learning requires secure multi-site storage",
+    "Quantum-safe encryption needed for long-term AI data",
+    "Compliance: GDPR, HIPAA affect AI training data"
   ],
-  "cycle": 4,
-  "streak": 0
+  "cycle": 14,
+  "streak": 4
 }
