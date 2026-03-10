@@ -1,26 +1,64 @@
 {
-  "original": "How could elastic block storage product involve with the trend of artificial intelligence growth, how could it still keep its leading position in storage and how could it support the AI industry?",
-  "generated": [
-    "How could elastic block storage product involve with the trend of artificial intelligence growth, how could it still keep its leading position in storage and how could it support the AI industry?",
-    "What are the specific IOPS requirements for LLM training?",
-    "How could elastic block storage product involve with the trend of artificial intelligence growth, how could it still keep its leading position in storage and how could it support the AI industry?",
-    "What are the specific IOPS requirements for LLM training?",
-    "How does storage latency impact model training time?",
-    "What storage protocols work best with Kubernetes AI workloads?",
-    "How to optimize cost vs performance for AI storage?",
-    "What role does caching play in AI storage architectures?"
+  "original_question": "",
+  "active_questions": [
+    "How to handle checkpointing at scale?",
+    "What's the TCO difference training vs inference storage?",
+    "How to optimize for multi-tenant inference?",
+    "What DR strategies work for AI workloads?",
+    "How to prevent checkpoint corruption?"
+  ],
+  "answered": [
+    {
+      "q": "",
+      "a": "AI training requires 100GB/s+ throughput for large datasets",
+      "cycle": 1
+    },
+    {
+      "q": "",
+      "a": "GPU clusters need sub-millisecond storage latency",
+      "cycle": 1
+    },
+    {
+      "q": "What IOPS are needed for LLM training?",
+      "a": "NVMe-oF enables shared storage with local NVMe performance",
+      "cycle": 2
+    },
+    {
+      "q": "What IOPS are needed for LLM training?",
+      "a": "Parallel filesystems (Lustre, GPFS) scale to 1000s of GPUs",
+      "cycle": 2
+    },
+    {
+      "q": "How does storage affect training time?",
+      "a": "AI inference has different patterns: random reads, low latency",
+      "cycle": 3
+    },
+    {
+      "q": "How does storage affect training time?",
+      "a": "Model serving needs <10ms p99 latency for real-time apps",
+      "cycle": 3
+    },
+    {
+      "q": "What's the ROI of NVMe-oF vs traditional SAN?",
+      "a": "Data pipelines need 99.99% availability during training",
+      "cycle": 4
+    },
+    {
+      "q": "What's the ROI of NVMe-oF vs traditional SAN?",
+      "a": "Storage failures can waste weeks of GPU time",
+      "cycle": 4
+    }
   ],
   "insights": [
-    "AI workloads require high-throughput, low-latency storage for training data",
-    "AI workloads require high-throughput, low-latency storage for training data",
-    "EBS must support parallel access patterns for distributed training",
-    "NVMe over Fabrics (NVMe-oF) is becoming standard for AI storage backends",
-    "AI inference needs different storage characteristics than training",
-    "Market projection: AI storage market to reach $50B+ by 2028",
-    "Key competitors: AWS EBS, Google Persistent Disk, Azure Ultra Disk",
-    "Differentiation: AI-optimized tiering, automatic data prefetching",
-    "Integration with ML frameworks (PyTorch, TensorFlow) is critical",
-    "Data locality matters - storage close to GPU clusters reduces latency",
-    "Elastic scaling must match AI workload burst patterns"
-  ]
+    "AI training requires 100GB/s+ throughput for large datasets",
+    "GPU clusters need sub-millisecond storage latency",
+    "NVMe-oF enables shared storage with local NVMe performance",
+    "Parallel filesystems (Lustre, GPFS) scale to 1000s of GPUs",
+    "AI inference has different patterns: random reads, low latency",
+    "Model serving needs <10ms p99 latency for real-time apps",
+    "Data pipelines need 99.99% availability during training",
+    "Storage failures can waste weeks of GPU time"
+  ],
+  "cycle": 4,
+  "streak": 0
 }

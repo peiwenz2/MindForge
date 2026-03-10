@@ -511,3 +511,45 @@
 **Insights**: []
 **Questions**: []
 
+
+--- 2026-03-10 20:22:15 ---
+## Cycle 2
+**Focus**: What IOPS are needed for LLM training?
+**Insights**: 2 | **New Questions**: 2 | **Queue**: 3
+
+INSIGHTS:
+- NVMe-oF enables shared storage with local NVMe performance
+- Parallel filesystems (Lustre, GPFS) scale to 1000s of GPUs
+
+QUESTIONS:
+- What's the ROI of NVMe-oF vs traditional SAN?
+- How to handle checkpointing at scale?
+
+
+--- 2026-03-10 20:23:15 ---
+## Cycle 3
+**Focus**: How does storage affect training time?
+**Insights**: 2 | **New Questions**: 2 | **Queue**: 4
+
+INSIGHTS:
+- AI inference has different patterns: random reads, low latency
+- Model serving needs <10ms p99 latency for real-time apps
+
+QUESTIONS:
+- What's the TCO difference training vs inference storage?
+- How to optimize for multi-tenant inference?
+
+
+--- 2026-03-10 20:24:15 ---
+## Cycle 4
+**Focus**: What's the ROI of NVMe-oF vs traditional SAN?
+**Insights**: 2 | **New Questions**: 2 | **Queue**: 5
+
+INSIGHTS:
+- Data pipelines need 99.99% availability during training
+- Storage failures can waste weeks of GPU time
+
+QUESTIONS:
+- What DR strategies work for AI workloads?
+- How to prevent checkpoint corruption?
+
