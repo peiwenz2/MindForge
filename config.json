@@ -1,0 +1,13 @@
+{
+  "cycleIntervalSeconds": 60,
+  "maxMemoryMB": 500,
+  "autoConvergence": true,
+  "reviewCyclesBeforeConvergence": 2,
+  "modelForThinking": "qwen3.5-plus",
+  "modelForReview": "glm-5",
+  "githubSync": true,
+  "githubSyncInterval": 60,
+  "maxCyclesPerQuestion": 500,
+  "researchDepth": "deep",
+  "autoInstallSkills": true
+}
