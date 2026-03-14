@@ -2,44 +2,64 @@
 
 **Status**: 🔄 In Progress
 **Started**: 2026-03-14
-**Cycle**: 2
+**Cycle**: 2 (Completed)
 
-## Current Focus
+## Cycle 2 Findings
 
-**New Direction** (Cycle 2): Deep research on industry best practices for automated Chat+Serving adapter
+### 1. Alibaba Cloud Bailian Model Survey
 
-### Key Questions
-1. What open-source models does Alibaba Cloud Bailian support and what serving backends do they use?
-2. What does msg in/out mean when defined as "direct model I/O without parser processing"?
-3. What are the most novel, optimal, automated adapter solutions in the industry?
+**Open Source Models**: Qwen3 (397B~0.6B), Qwen2.5 (72B~7B + 1M long context), QwQ, Qwen2.5 Coder/Math
 
-## Completed (Cycle 1)
+**Commercial Models**: Qwen Max/Plus/Flash/Turbo tiered产品线
 
-- [x] vLLM vs SGLang architecture comparison
-- [x] Adapter pattern design (ServingAdapter abstract interface)
-- [x] FeatureRouter intelligent routing logic
-- [x] Feature support comparison table (30+ features)
-- [x] Evaluation framework (100-point scoring system)
-- [x] Multi-serving collaboration patterns
-- [x] Implementation roadmap
+**Key Finding**: Bailian provides full OpenAI-compatible API, but underlying serving backend (vLLM/SGLang/self-built) is NOT disclosed.
 
-## In Progress (Cycle 2)
+### 2. msg in/out Redefined
 
-- [ ] Alibaba Cloud Bailian model-serving survey
-- [ ] msg in/out definition clarification (direct I/O mode)
-- [ ] Industry best practices research (LiteLLM, OpenRouter, etc.)
-- [ ] Novel adapter solutions 2025-2026
+**User Clarification**: Direct model I/O without parser processing.
 
-## Pending
+**Implications for Adapter Design**:
+- **Thin Adapter**: Minimal intervention, pass-through mode
+- **Zero-copy**: Avoid serialization/deserialization
+- **Streaming-first**: Minimize TTFT, native SSE/WebSocket
+- **Error transparency**: Pass through raw model errors
 
-- [ ] Code implementation of optimal adapter
-- [ ] Benchmark script for vLLM vs SGLang
+### 3. Industry Best Practice: LiteLLM + Multi-Provider
+
+**Recommended Architecture**:
+```
+Client → LiteLLM Proxy → [DashScope (Bailian), Together AI, Self-hosted vLLM/SGLang]
+```
+
+**Why LiteLLM**:
+- ✅ 100+ Provider support (including DashScope)
+- ✅ Built-in Fallback, Retry, Load Balancing
+- ✅ P95 latency 8ms @ 1k RPS
+- ✅ Pass-through mode for msg in/out
+- ✅ Cost tracking, rate limiting, virtual keys
+
+**Routing Strategies**: simple-shuffle (prod), least-busy, latency-based, cost-based
+
+## Completed
+
+- [x] vLLM vs SGLang architecture comparison (Cycle 1)
+- [x] Alibaba Cloud Bailian model-serving survey (Cycle 2)
+- [x] msg in/out definition clarification (Cycle 2)
+- [x] Industry best practices research - LiteLLM (Cycle 2)
+- [x] Recommended architecture design (Cycle 2)
+
+## Next Steps (Cycle 3)
+
+- [ ] Deploy LiteLLM Proxy with DashScope + Together AI
+- [ ] Implement benchmark for msg in/out latency
 - [ ] Production deployment guide
+- [ ] Thin Adapter code implementation (if needed)
 
-## Next Sync
+## Documents
 
-Auto-sync runs every 3 minutes via cron job.
+- `docs/2026-03-14-chat-model-serving-architecture.md` (Cycle 1)
+- `docs/serving-adapter-research.md` (Cycle 2)
 
 ---
 
-**Last Updated**: 2026-03-14 23:12 GMT+8
+**Last Updated**: 2026-03-14 23:17 GMT+8
